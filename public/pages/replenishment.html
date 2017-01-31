@@ -1,0 +1,29 @@
+<div class="jumbotron text-left">
+	<div class="row">
+		<p>Replenishment cash machine:</p>
+	</div>
+	<div class="row">
+	  <div class="col-lg-6">
+				<div class="row">
+			 		<input type="number" placeholder="Quantity" ng-model="quantity">
+		 		</div>
+				<div class="row">
+						<select ng-model="choosedNote">
+								<option ng-repeat="noteType in currencyNoteTypes" value="{{noteType.type}}">${{noteType.value}}</option>
+						</select>
+						<br /><br />
+				</div>
+				<div class="row">
+						<input type="button" class="btn btn-primary" value="Save Note" ng-click="save()"/>
+				</div>
+	  </div>
+	</div>
+</div>
+<div class="alert alert-success" ng-show="showSuccessAlert">
+   <button type="button" class="close" ng-click="switchBool('showSuccessAlert')" >×</button>
+   <strong>Done!</strong> {{successTextAlert}}
+ </div>
+ <div class="alert alert-danger" ng-show="showErrorAlert">
+    <button type="button" class="close" ng-click="switchBool('showErrorAlert')" >×</button>
+    <strong>Done!</strong> {{errorTextAlert}}
+  </div>

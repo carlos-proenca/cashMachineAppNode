@@ -1,0 +1,23 @@
+{
+  "name": "cash-machine-app",
+  "version": "1.0.0",
+  "description": "The cash machine app to retrieve your maney",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --harmony app.js",
+    "test": "mocha --recursive --reporter nyan"
+  },
+  "author": "Carlos Proença",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongorito": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7"
+  }
+}

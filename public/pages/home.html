@@ -1,0 +1,30 @@
+<div class="jumbotron text-center">
+	<div class="row">
+		<h1>Take your money:</h1>
+	</div>
+	<div class="row">
+		<p>How much are you needing ?</p>
+	</div>
+	<div class="row">
+	  <div>
+	    <div class="input-group">
+	      <input type="number" class="form-control" placeholder="$..." ng-model="money">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" ng-click="getCash()" >Go!</button>
+	      </span>
+	    </div>
+	  </div>
+	</div>
+</div>
+<div class="row">
+	<div class="alert alert-success" ng-show="isToShowResult">
+	   <button type="button" class="close" ng-click="switchBool('isToShowResult')" >×</button>
+	   <strong>Awesome!</strong>
+		  <p>For this amount you will need:
+				<p>{{resultNotes.ONE_HUNDRED_NOTES}} Notes of R$ 100.<p>
+				<p>{{resultNotes.FIFTY_NOTES}} Notes of R$ 50.<p>
+				<p>{{resultNotes.TWENTY_NOTES}} Notes of R$ 20.<p>
+				<p>{{resultNotes.TEN_NOTES}} Notes of R$ 10.<p>
+			</p>
+	 </div>
+</div>
